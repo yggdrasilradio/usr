@@ -13,6 +13,7 @@
 	def usr0 = peek(&h1000) * 256 + peek(&h1001)
 	def usr1 = peek(&h1002) * 256 + peek(&h1003)
 	def usr2 = peek(&h1004) * 256 + peek(&h1005)
+	def usr3 = peek(&h1006) * 256 + peek(&h1007)
 
 	' Call ML functions
 	a = usr0(299.6)		' Multiply by 2
@@ -20,13 +21,15 @@
 	c = usr2("Testing")	' Number of vowels in string
 	d = usr2(0)		' Wrong data type
 	e = usr2("")		' Zero length string
+	s$ = usr3(0)		' Generate string based on numeric argument
 
 	' Did it work?
-	print a ' 598
-	print b ' 149
-	print c ' 2
-	print d ' 0
-	print e ' 0
+	print a  ' 598
+	print b  ' 149
+	print c  ' 2
+	print d  ' 0
+	print e  ' 0
+	print s$ ' ZERO
 
 	' Wait for BREAK to be pressed
 10	goto 10
