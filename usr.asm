@@ -69,8 +69,8 @@ ltz@	leax	minus,pcr
 	bra	done@
 eqz@	leax	zero,pcr
 done@	ldb	,x+		; get length
-	stb	STRDES + _LEN	; save length
-	stx	STRDES + _PTR	; save text
+	stb	STRDES+_LEN	; save length
+	stx	STRDES+_PTR	; save text
 	jmp	GIVSTR		; return string
 
 minus	fcb	5
